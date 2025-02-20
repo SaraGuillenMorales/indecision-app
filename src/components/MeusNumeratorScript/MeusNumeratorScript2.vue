@@ -12,17 +12,8 @@
     </section>
 </template>
 
-<script lang="ts" setup>
-import { computed, ref } from 'vue';
 
-interface Props {
-    valorem: number;
-}
 
-const props = defineProps<Props>();
 
-const numerus = ref(props.valorem);
-
-const quadrataNumerus = computed(()=> numerus.value * numerus.value);
-
+<script lang="ts" src="./MeusNumeratorScript2.ts">
 </script>
