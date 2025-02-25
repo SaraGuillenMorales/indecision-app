@@ -13,6 +13,7 @@
 </template>
 
 <script lang="ts" setup>
+import { useNumerator } from '@/composables/usNumerator';
 import { computed, ref } from 'vue';
 
 interface Props {
@@ -21,8 +22,9 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const numerus = ref(props.valorem);
+const { numerus, quadrataNumerus } = useNumerator(props.valorem);
 
-const quadrataNumerus = computed(()=> numerus.value * numerus.value);
+
+
 
 </script>
