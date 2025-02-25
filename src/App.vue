@@ -33,7 +33,10 @@
   </template>
   
   <script lang="ts" setup>
+  import IndecisionVue from './views/IndecisionVue.vue';
+  
     // import MeusNumerator from './components/MeusNumerator.vue';
     // import MeusNumeratorScript from './components/MeusNumeratorScript.vue';
     // import MeusNumeratorScript2 from './components/MeusNumeratorScript/MeusNumeratorScript2.vue';
+
   </script>
