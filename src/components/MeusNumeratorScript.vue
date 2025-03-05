@@ -1,6 +1,13 @@
 
 <template>
     <section>
+        <h3>Counter: {{ numerus }}</h3>
+        <h3>Square: {{ quadrataNumerus }}</h3>
+         
+        <div>
+            <button @click="numerus++">+1</button>
+            <button @click="numerus--">-1</button>
+        </div>
     </section>
 </template>
 
@@ -10,7 +17,7 @@ import { computed, ref, defineComponent } from 'vue';
 
 export default defineComponent({
     props: {
-        valorem: { type: Number, required: true}
+        valorem: { type: Number, required: true},
     },
 
     setup(props) {
@@ -20,8 +27,8 @@ export default defineComponent({
         return {
             numerus,
             quadrataNumerus,
-        }
-    }
+        };
+    },
 });
 
 

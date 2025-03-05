@@ -1,16 +1,27 @@
 <template>
 
-<div class="p-4 flex-1 overflow-y-auto">
+<div class="p-4 flex-1 overflow-auto">
     <div class="flex flex-col space-y-2">
 
-            <ChatBullula: meus-est="true" nuntius=""Salimos luego a dar una vuelta? />
+            <ChatBullula 
+            v-for="nuntius in nuntii" 
+            :key="nuntius.id" 
+            v-bind="nuntius" 
+            />
 
 </div>
 </div>
 
 </template>
 
-<script>
-import ChatBullula from './chatBullula.vue';
-import chatBullula from './chatBullula.vue';
+<script lang="ts" setup>
+import type { ChatNuntius } from '@/interfaces/chat-nuntius.interface.ts';
+import ChatBullula from '@/components/chat/chatBullula.vue';
+
+interface Props {
+    nuntii: ChatNuntius[];
+}
+
+defineProps<Props>()
+
 </script>

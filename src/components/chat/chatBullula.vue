@@ -8,13 +8,16 @@
 
 <div v-else class="flex">
     <div class="bg-gray-300 text-black p-2 m-w-xs rounded-b-lg">
-        {{ nuntius }}
+    
+        <span class="capitalize">{{ nuntius }}</span>
+        <img v-if="imago" :src="imago" alt="YesNoImage" class="w-52 h-52">
     </div>
 </div>
 
 </template>
 
 <script lang="ts" setup>
+
 interface Props {
     nuntius: string;
     meusEst: boolean;

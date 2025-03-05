@@ -21,10 +21,6 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-
 const { numerus, quadrataNumerus } = useNumerator(props.valorem);
-
-
-
 
 </script>

@@ -1,4 +1,4 @@
-import { computed, ref } from "vue";
+import { computed, ref } from 'vue';
 
 export const useNumerator = ( incipiensValorem: number = 10 ) => {
 
@@ -9,6 +9,6 @@ export const useNumerator = ( incipiensValorem: number = 10 ) => {
 
     return {
         numerus, 
-        quadrataNumerus
-    }
-}
+        quadrataNumerus,
+    };
+};

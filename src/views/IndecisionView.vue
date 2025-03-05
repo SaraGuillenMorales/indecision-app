@@ -5,17 +5,20 @@
     <span>Mi esposo</span>
 </div>
 
-<ChatNuntii />
+<ChatNuntii :nuntii="nuntii"/>
 
-<textusArca />
+<TextusArca @mitte-nuntius="($event: string) => cumNovumMuntius ($event)"/>
+
 
 </div>
-
 </template>
 
 
 <script lang="ts" setup>
 import ChatNuntii from '@/components/chat/chatNuntii.vue';
-import textusArca from '@/components/chat/textusArca.vue';
+import textusArca from '@/components/chat/TextusArca.vue';
+import { useChat } from '@/composables/useChat';
+
+const { nuntii, cumNovumMuntius } = useChat();
 
 </script>
