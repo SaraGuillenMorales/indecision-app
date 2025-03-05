@@ -3,11 +3,7 @@
 <div class="p-4 flex-1 overflow-auto">
     <div class="flex flex-col space-y-2">
 
-            <ChatBullula 
-            v-for="nuntius in nuntii" 
-            :key="nuntius.id" 
-            v-bind="nuntius" 
-            />
+            <ChatBullula: meus-est="true" nuntius=""Salimos luego a dar una vuelta? />
 
 </div>
 </div>
